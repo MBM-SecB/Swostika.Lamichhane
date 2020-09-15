@@ -4,9 +4,9 @@ public class NumberOfPoints
     static void Main3()
     {
         NumberOfPoints s = new NumberOfPoints();
-        s.number_of_points();
+        s.NPoints();
     }
-    public void number_of_points()
+    public void NPoints()
     {
         int win, draw, lose, points;
         Console.Write("Enter number of wins: ");
