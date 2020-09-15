@@ -1,13 +1,13 @@
-public class MethodTeacher
+using System;
+public class MethodTeach
 {
-    //simple methods:takes 2 arguments and return a value
+    //Simple-method: takes 2 arguments , and returns a value .
     public int Multiply(int firstNum, int secondNum)
     {
         int result = firstNum * secondNum;
         return result;
     }
 
-    // Variable numbers of arguments
     public int Multiply(params int[] numbers)
     {
         int product = 1;
@@ -17,22 +17,30 @@ public class MethodTeacher
         }
         return product;
     }
-    public int MinMax(params int[] num)
-    {
 
-        return product;
-    }
+    //Named-arguements 
+    // internal void PrintCustomerDetails(string name, byte age, string address, DateTime dob)
+    // {
+    //     //using string interpolation 
+    //     Console.Write($"Customer Details: {name},{age},{address},{dob}");
+    // }
+    // //returning multiple value.
+    // (int, string) Dosomething(int x)
+    // {
+    //     //do something on x
+    //     return (434, "");
+    // }
+
 
 }
-
-
-public class MethodTester
+public class MethodTest
 {
     void TestMethods()
     {
-        MethodTeacher s = new MethodTeacher();
-        int product = s.Multiply(2, 6);
+        MethodTeach methodTeach = new MethodTeach();
+        int product = methodTeach.Multiply(11134, 3456);
+        product = methodTeach.Multiply(11134, 3456, 111, 2344, 2111);
 
-        product = s.Multiply(4, 5, 6);
+
     }
 }
