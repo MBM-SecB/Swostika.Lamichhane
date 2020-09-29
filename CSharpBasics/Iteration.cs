@@ -1,56 +1,62 @@
 using System;
-class IterationStatement
+
+namespace SelectAndLoop
 {
-    static void Main()
+    class IterationStatement
     {
-        IterationStatement iterationStatement = new IterationStatement();
-        iterationStatement.LearnWhileLoops();
-
-        // AccessModifier s = new AccessModifier();
-        // s.Dosomething();
-
-        // Person person = new Person();
-        // person.Age = 34;
-
-    }
-    void LearnForLoops()
-    {
-        int i;
-        for (i = 0; i < 10; i++)
+        static void Main12()
         {
-            Console.WriteLine("hey");
+            IterationStatement iterationStatement = new IterationStatement();            
+            iterationStatement.LearnWhileLoops();
+
+            AccessModifier accessModifier = new AccessModifier();
+            accessModifier.DoAnotherThing();
+
+            Person person = new Person();
+            person.Age = 34;
         }
 
-        byte[] personAges = { 23, 45, 6, 78, 23 };
-        foreach (byte age in personAges)
+        void LearnForLoops()
         {
-            if (age % 2 == 0)
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(age + " is even");
+                Console.WriteLine("I am beautiful.");
             }
-            else
+
+            byte[] personAges = { 20, 45, 6, 78, 23 };
+
+            foreach (byte age in personAges)
             {
-                Console.WriteLine(age + " is odd");
+                if (age % 2 == 0)
+                {
+                    Console.WriteLine(age + " is EVEN.");
+                }
+                else
+                {
+                    Console.WriteLine(age + " is ODD.");
+                }
             }
         }
 
-    }
-
-    void LearnWhileLoops()
-    {
-        char confirm = 'Y';
-        while (confirm == 'Y')
+        void LearnWhileLoops()
         {
-            Console.WriteLine("inside a while loop");
-            Console.WriteLine("enter Y to continue");
-            confirm = Console.ReadKey().KeyChar;
+            char confirm = 'Y';
+            while (confirm == 'Y')
+            {
+                Console.WriteLine("I am inside while loop.");
+
+                Console.Write("Enter Y to continue: ");
+                confirm = Console.ReadKey().KeyChar;
+            }
+
+            do
+            {
+                Console.WriteLine("I am inside while loop.");
+
+                Console.Write("Enter Y to continue: ");
+                confirm = Console.ReadKey().KeyChar;
+
+            } while (confirm == 'Y');
         }
-        do
-        {
-            Console.WriteLine("inside a while loop");
-            Console.WriteLine("enter Y to continue");
-            confirm = Console.ReadKey().KeyChar;
-        } while (confirm == 'Y');
     }
-
 }

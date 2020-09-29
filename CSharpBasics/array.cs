@@ -2,30 +2,35 @@ class Array
 {
     void Learn1DArrays()
     {
-        int[] ages = new int[5];
-        ages[0] = 23;
-        ages[1] = 32;
-        ages[2] = 324;
-        ages[3] = 54;
-        ages[4] = 11;
-        int[] ages2 = new int[] { 34, 34, 65, 76 };
-        int[] ages3 = { 34, 34, 65, 76 };
+        int[] ages1 = new int[5];
+        ages1[0] = 23;
+        ages1[1] = 23;
+        ages1[2] = 23;
+        ages1[3] = 23;
+
+        float[] ages2 = new float[] { 45, 67, 23 };
+
+        decimal[] ages3 = { 45, 67, 23 };
     }
+
     void LearnMDArrays()
     {
-        int[,] multable = new int[3, 4];
-        multable[0, 0] = 23;
-        double[,,] multable2 = new double[3, 4, 2];
-        multable2[0, 0, 0] = 2.56;
+        int[,] mulTable = new int[3, 4];
+        mulTable[0, 0] = 2;
 
+        // 3-D
+        double[,,] mulTable2 = new double[3, 4, 2];
+        mulTable2[0, 0, 0] = 2.56;
 
-        byte[,] numbers = { { 10, 27, 32 }, { 44, 45, 22 } };
+        byte[,] numbers = { { 10, 27, 34 }, { 33, 14, 56 } };
     }
+
     void LearnJaggedArrays()
     {
         int[][] mulTable = new int[3][];
-        mulTable[0] = new int[] { 2, 3, 5 };
+        mulTable[0] = new int[] { 2, 4, 6 };
         mulTable[1] = new int[] { 2, 4 };
-        mulTable[2] = new int[] { 3, 5, 6, 4, 3 };
+        mulTable[2] = new int[] { 2, 4, 6, 45, 23 };
     }
+
 }
