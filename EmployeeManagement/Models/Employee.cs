@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations;
 public class Employee
 {
     [Display(Name = "First Name")]
-    [Required]
+    [Required (ErrorMessage="We need first name")] 
     public string FirstName { get; set; }
 
-    [Required]
+    [Required (ErrorMessage="We need last name")]
     [Display(Name = "Last Name")]
     public string LastName { get; set; }
 
