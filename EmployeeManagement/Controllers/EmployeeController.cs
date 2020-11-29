@@ -1,15 +1,15 @@
 using System.Linq;
+using EmployeeManagement.Data;
 using Microsoft.AspNetCore.Mvc;
 public class EmployeeController : Controller
 {
-    public ActionResult<string> Index()
+    public ActionResult Index()
     {
-        var employees = Employee.GetEmployees();
+        var db = new EMSContext();
+        var employees = db.Employees.ToList();
+        
 
         // List<Employee> employees = new List<Employee>();
-
-
-
 
 
         return View(employees);
