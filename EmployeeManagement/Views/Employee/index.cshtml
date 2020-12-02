@@ -26,13 +26,23 @@
       <tr>
         <td>@(i+1)</td>
         <td>
-          <a href="/employee/detail?firstName=@Model[i].FirstName">@Model[i].FirstName</a>
+          @{
+            string fn = Model[i].FirstName;
+          }
+          <a href="/employee/detail?id=@Model[i].Id">@fn</a>
         </td>
         <td>@Model[i].LastName</td>
         <td>@Model[i].Address</td>
         <td>@Model[i].Gender</td>
         <td>@Model[i].Salary</td>
+
+        <form asp-controller="Employee" asp-action="Delete" asp-route-id="@Model[i].Id" method="POST">
+          <td>
+            <input type="submit" value="Delete">
+          </td>
+        </form>
       </tr>
     }
+
   </tbody>
 </table>
