@@ -38,6 +38,23 @@ public class EmployeeController : Controller
         return RedirectToAction(nameof(Index));
     }
 
+    public ActionResult Edit(int id)
+    {
+        var employee=db.Employees.Find(id);
+        return View(employee);
+    }
+
+    [HttpPost]
+
+    public ActionResult Edit(Employee employee)
+    {
+        db.Employees.Attach(employee);
+        db.Employees.Update(employee);
+        db.SaveChanges();
+
+        return RedirectToAction(nameof(Index));
+    }
+
      [HttpPost]
     public ActionResult Delete(int id)
     {
@@ -47,4 +64,8 @@ public class EmployeeController : Controller
 
         return RedirectToAction(nameof(Index));
     }
+
+    
+    
+
 }
